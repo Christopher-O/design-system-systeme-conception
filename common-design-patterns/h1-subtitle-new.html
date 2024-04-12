@@ -19,26 +19,25 @@
 		</script>
 		<style>
 		h1 span.stacked {
-		                display: flex;
-		                flex-direction: column-reverse;
-		                margin-left: -9999px;
-		}
-		h1 span.stacked span:nth-child(1), h1 span.stacked span:nth-child(2) {
-		                margin-left: 9999px;
-		}
-		h1 span.stacked span:nth-child(2) {
-		                font-size: 0.8em;
-		                color: #666;
-										font-weight: 200;
-										margin-bottom: 0.175em;
-		}
-		h1 span.stacked span:nth-child(1) {
-		                margin-top: -1.1em;
-		}
-
-		img.pattern-demo {
-		  -webkit-filter: drop-shadow(3px 3px 5px #aaaaaa);
-		  filter: drop-shadow(3px 3px 5px #aaaaaa);
+    display: flex;
+    flex-direction: column-reverse;
+    visibility: hidden;
+}
+h1 span.stacked span:nth-child(1), h1 span.stacked span:nth-child(2) {
+    visibility: visible;
+}
+h1 span.stacked span:nth-child(2) {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 200;
+    margin-bottom: 0.175em;
+}
+h1 span.stacked span:nth-child(1) {
+    margin-top: -1.1em;
+}
+img.pattern-demo {
+    -webkit-filter: drop-shadow(3px 3px 5px #aaaaaa);
+    filter: drop-shadow(3px 3px 5px #aaaaaa);
 }
 		</style>
 	</head>
@@ -126,31 +125,33 @@
       
       <p>The following is putting the class <code>.stacked</code> on the root h1, which then requires the stubby line to be replaced on the first child</p>
 <pre class="prettyprint">
-&lt;h1 property=&quot;name&quot; id=&quot;wb-cont&quot; dir=&quot;ltr&quot; class=&quot;stacked&quot;&gt;&lt;span&gt;H1 subtitle&lt;/span&gt; - &lt;span&gt;Alpha design pattern&lt;/span&gt;&lt;/h1&gt;
+&lt;h1 property=&quot;name&quot; id=&quot;wb-cont&quot; dir=&quot;ltr&quot; class=&quot;stacked&quot;&gt;
+	&lt;span&gt;H1 subtitle&lt;/span&gt; - &lt;span&gt;Alpha design pattern&lt;/span&gt;
+	&lt;/h1&gt;
 </pre>
   <p>The CSS required is as follows</p> 
 <pre class="prettyprint">
-h1#wb-cont.stacked {<br>
-display: flex;<br>
-flex-direction: column-reverse;<br>
-visibility: hidden;<br>
-}<br>
-h1.stacked span:nth-child(1), h1.stacked span:nth-child(2) {<br>
-visibility: visible;<br>
-}<br>
-h1.stacked span:nth-child(2) {<br>
-font-size: 0.8em;<br>
-color: #666;<br>
-font-weight: 200;<br>
-padding-bottom: 0.175em;<br>
-}<br>
-h1.stacked span:nth-child(1) {<br>
-margin-top: -1.1em;<br>
-padding-bottom: 0.2em;<br>
-border-bottom: .18em solid #af3c43;<br>
--o-border-image: linear-gradient(to right, #af3c43 71px, transparent 71px);<br>
-border-image: linear-gradient(to right, #af3c43 71px, transparent 71px);<br>
-border-image-slice: 1;<br>
+h1#wb-cont.stacked {
+display: flex;
+flex-direction: column-reverse;
+visibility: hidden;
+}
+h1.stacked span:nth-child(1), h1.stacked span:nth-child(2) {
+visibility: visible;
+}
+h1.stacked span:nth-child(2) {
+font-size: 0.8em;
+color: #666;
+font-weight: 200;
+padding-bottom: 0.175em;
+}
+h1.stacked span:nth-child(1) {
+margin-top: -1.1em;
+padding-bottom: 0.2em;
+border-bottom: .18em solid #af3c43;
+-o-border-image: linear-gradient(to right, #af3c43 71px, transparent 71px);
+border-image: linear-gradient(to right, #af3c43 71px, transparent 71px);
+border-image-slice: 1;
 }
 </pre>
 <h2>Option 2</h2>
@@ -164,22 +165,22 @@ border-image-slice: 1;<br>
 </pre>
  <p>The CSS required is as follows</p> 
 <pre class="prettyprint">
-h1 span.stacked {<br>
-display: flex;<br>
-flex-direction: column-reverse;<br>
-visibility: hidden;<br>
-}<br>
-h1 span.stacked span:nth-child(1), h1 span.stacked span:nth-child(2) {<br>
-visibility: visible;<br>
-}<br>
-h1 span.stacked span:nth-child(2) {<br>
-font-size: 0.8em;<br>
-color: #666;<br>
-font-weight: 200;<br>
-margin-bottom: 0.175em;<br>
-}<br>
-h1 span.stacked span:nth-child(1) {<br>
-margin-top: -1.1em;<br>
+h1 span.stacked {
+display: flex;
+flex-direction: column-reverse;
+visibility: hidden;
+}
+h1 span.stacked span:nth-child(1), h1 span.stacked span:nth-child(2) {
+visibility: visible;
+}
+h1 span.stacked span:nth-child(2) {
+font-size: 0.8em;
+color: #666;
+font-weight: 200;
+margin-bottom: 0.175em;
+}
+h1 span.stacked span:nth-child(1) {
+margin-top: -1.1em;
 }
 </pre>
 
